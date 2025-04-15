@@ -69,27 +69,32 @@
     }
 
     .flower {
-      background: #f1e3f3;
-      border-radius: 1rem;
-      padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      width: 100%;
-      max-width: 250px;
-      cursor: pointer;
-      transition: all 0.4s ease;
-      position: relative;
-      height: 60px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
+  background: #f1e3f3;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers vertically */
+  align-items: center;     /* centers horizontally */
+  text-align: center;
+}
 
     .flower strong {
-      font-size: 1.1rem;
-      color: #c96a83;
-    }
+  font-size: 1.1rem;
+  color: #c96a83;
+  transition: margin-bottom 0.3s ease;
+}
+    .flower.show strong {
+  margin-bottom: 0.5rem; /* adds spacing from the detail text when expanded */
+}
 
     .flower-detail {
       font-size: 0.95rem;
