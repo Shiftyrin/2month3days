@@ -69,32 +69,41 @@
     }
 
     .flower {
-  background: #f1e3f3;
-  border-radius: 1rem;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  width: 100%;
-  max-width: 250px;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  position: relative;
-  height: 60px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centers vertically */
-  align-items: center;     /* centers horizontally */
-  text-align: center;
-}
+      background: #f1e3f3;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      width: 100%;
+      max-width: 250px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+      min-height: 60px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .flower-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
     .flower strong {
-  font-size: 1.1rem;
-  color: #c96a83;
-  transition: margin-bottom 0.3s ease;
-}
+      font-size: 1.1rem;
+      color: #c96a83;
+      transition: margin-bottom 0.3s ease;
+    }
+
     .flower.show strong {
-  margin-bottom: 0.5rem; /* adds spacing from the detail text when expanded */
-}
+      margin-bottom: 0.5rem;
+    }
 
     .flower-detail {
       font-size: 0.95rem;
@@ -103,11 +112,9 @@
       transform: scale(0.95);
       transition: all 0.4s ease;
       pointer-events: none;
-      text-align: center;
     }
 
     .flower.show {
-      height: 160px;
       transform: scale(1.05);
     }
 
@@ -146,6 +153,10 @@
       .flower-detail {
         font-size: 0.9rem;
       }
+
+      .flowers {
+        gap: 0.75rem;
+      }
     }
   </style>
 </head>
@@ -160,12 +171,16 @@
 
     <div class="flowers">
       <div class="flower" onclick="toggleDetail(this)">
-        <strong>🤍 White Roses</strong>
-        <div class="flower-detail">Purity and new beginnings — just like the pure love we're bonded to.</div>
+        <div class="flower-content">
+          <strong>🤍 White Roses</strong>
+          <div class="flower-detail">Purity and new beginnings — just like the pure love we're bonded to.</div>
+        </div>
       </div>
       <div class="flower" onclick="toggleDetail(this)">
-        <strong>💜 Purple Asters</strong>
-        <div class="flower-detail">Elegance and admiration — every moment with you is full of grace.</div>
+        <div class="flower-content">
+          <strong>💜 Purple Asters</strong>
+          <div class="flower-detail">Elegance and admiration — every moment with you is full of grace.</div>
+        </div>
       </div>
     </div>
 
