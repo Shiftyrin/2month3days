@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To My Witch 🤍💜</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to bottom right, #f5f0ff, #fff9f9);
+      color: #4b2e2e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      background: #fdf6fa;
+      padding: 2rem;
+      border-radius: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+      overflow-y: auto;
+      animation: slideUp 1s ease-in-out;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #b45c73;
+    }
+
+    .message {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      color: #3c2c28;
+    }
+
+    .flowers {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+
+    .flower {
+      background: #f1e3f3;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      width: 100%;
+      max-width: 250px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+      height: 60px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .flower strong {
+      font-size: 1.1rem;
+      color: #c96a83;
+    }
+
+    .flower-detail {
+      font-size: 0.95rem;
+      color: #5a3e36;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 0.4s ease;
+      pointer-events: none;
+      text-align: center;
+    }
+
+    .flower.show {
+      height: 160px;
+      transform: scale(1.05);
+    }
+
+    .flower.show .flower-detail {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #845d5d;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .message {
+        font-size: 1rem;
+      }
+
+      .flower strong {
+        font-size: 1rem;
+      }
+
+      .flower-detail {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>To My Witch 🤍💜</h1>
+    <div class="message">
+      <p>Happy 2 months and 3 days, your majesty, my witch.</p>
+      <p>We've grown beyond the butterflies era, into something more honest, yet deeper, and even more meaningful. Not many sweet words out on those next phase. We may not be able to spend our time together as much as how we’ve done in the butterfly era. But deep down inside our heart, we've placed our name together there. So, no matter how tired we all gonna be, we know who's waiting to support us after those tiring days.</p>
+      <p>I love the way you scream with that high-pitch sound during our call, the cuteness and the pure emotion you gave me, comfort me a lot when no one does it. We've only known each other for 5 days before we finally were together. Thanks for calling me sweetheart that day, ’cause that's truly the moment I realized we're meant to be together. Ignore those thoughts that 5 days are considered fast — if both of us, soul to soul, were created to complete each other, what’s there to worry about?</p>
+    </div>
+
+    <div class="flowers">
+      <div class="flower" onclick="toggleDetail(this)">
+        <strong>🤍 White Roses</strong>
+        <div class="flower-detail">Purity and new beginnings — just like the pure love we're bonded to.</div>
+      </div>
+      <div class="flower" onclick="toggleDetail(this)">
+        <strong>💜 Purple Asters</strong>
+        <div class="flower-detail">Elegance and admiration — every moment with you is full of grace.</div>
+      </div>
+    </div>
+
+    <footer>
+      Rizal, a.k.a. the knight and frog who is completely yours.
+    </footer>
+  </div>
+
+  <script>
+    function toggleDetail(el) {
+      el.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
